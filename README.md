@@ -73,30 +73,3 @@ CostGuard Agent uses Strands Decider 2B to classify each query into three tiers:
 6. Log the decision and calculate an estimated cost using configured model prices and token assumptions.
 
 **Current limitation:** Real Amazon Bedrock inference has not yet been verified because the account's model invocation is returning `ValidationException: Operation not allowed`. Mock-mode results do not demonstrate successful Bedrock inference.
-
-
-**Note:** Diagram tumhare documented design ko represent karta hai. Commit karne se pehle ise `decider.py` aur `main.py` ke actual execution flow se match karna zaroori hai.
-
-## 4. Abhi ek aur important section chahiye: Evaluation
-
-Tumne pehle 12 original aur 12 holdout test cases run kiye the, jisme dono groups mein 100% routing-tier agreement report hua tha.
-
-Lekin ise carefully explain karna hoga:
-
-- Original test cases: 12/12 expected tiers se match.
-- Holdout test cases: 12/12 expected tiers se match.
-- Ye manually labelled test cases par routing agreement hai.
-- Ye actual model response quality, production accuracy ya real AWS cost savings prove nahi karta.
-- Real Bedrock inference abhi pending hai.
-
-Isse README mein transparent tarike se include karna judges ke liye credibility badhayega.
-
----
-
-## 5. Ab next step
-
-Tumne README ka sirf pehla part bheja hai. `## Architecture` ke baad ka **poora remaining content bhi paste kar do**, agar available hai.
-
-Main check karunga ki installation commands, environment variables, evaluation instructions, cost calculation, limitations aur project structure properly documented hain ya nahi. Uske baad hum ek complete, consistent README finalize karenge—bina working code ko unnecessary change kiye.
-
-
