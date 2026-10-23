@@ -1,0 +1,29 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.aws/
+*credentials*
+*.pem
+*.key
+
+# Local Git metadata
+.git-project/
+
+# Generated logs and evaluation reports
+decisions_log.json
+evaluation_results/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

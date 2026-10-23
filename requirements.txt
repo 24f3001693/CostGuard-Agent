@@ -1,0 +1,4 @@
+strands-decider
+strands-agents
+boto3
+python-dotenv
